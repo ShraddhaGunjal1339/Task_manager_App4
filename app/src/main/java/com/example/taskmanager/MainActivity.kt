@@ -81,7 +81,13 @@ fun GreetingTaskManager(name: String,message: String, modifier: Modifier = Modif
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    TaskManagerTheme {
-        //Greeting("Android")
+    Column {
+        TaskManagerTheme {
+            GreetingTaskManager(
+                stringResource(R.string.all_tasks_completed),
+                stringResource(R.string.nice_work)
+            )
+            //Greeting("Android")
+        }
     }
 }
